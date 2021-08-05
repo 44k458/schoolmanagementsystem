@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>STUDENT MANAGEMENT SYSTEM</title>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
+</head>
+<style>
+body
+{
+	background-color: black;
+	color: whitesmoke;
+
+}
+a {text-decoration: none;color: whitesmoke;}
+#forteachers,#forstudents
+{
+/*    border: 1px solid white;*/
+	margin-top: 100px;
+    text-align: center;
+	
+	color: black;
+    	text-decoration: none;
+}
+#tl,#sl,#alldata,#title
+{
+
+    font-family:  'Montserrat', sans-serif;;
+    border: 1px solid whitesmoke;
+	font-size: 30px;
+	height: 100px;
+	width: 400px;
+	background-color: black;
+	color: whitesmoke;
+}
+#titlee
+{
+  display: grid;
+  text-align: center;
+  font-size: 25px;
+      font-family:  'Montserrat', sans-serif;;
+}
+</style>
+<body>
+	<div id="titlee">
+		<b>SCHOOL MANAGEMENT SYSTEM</b>
+	</div>
+<div id="forteachers">
+<button id="tl">
+<a href="http://localhost/crudapp/frontpageforteachers.html" style="text-decoration-color: none;color: whitesmoke;text-underline-position: unset;">TEACHERS PAGE	
+</a>
+</button>
+
+<div id="forstudents">
+<button id="sl"> 
+	<a href="http://localhost/crudapp/frontpageforstudents.html" style="text-decoration-color: none;color:whitesmoke;">STUDENTS PAGE</a>
+</button>
+<button id="alldata">
+	<a href="alldata.php">DISPLAY ALL DATA</a>
+</button>
+</div>
+</body>
+</html>

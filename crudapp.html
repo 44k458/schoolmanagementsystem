@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CRUD_APP</title>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
+
+</head>
+
+<style>
+input[type=text],input[type=number]
+{
+	background-color: transparent;
+	border-top: none;
+	font-size: 30px;
+	font-family:'Montserrat', sans-serif; ;
+	color: whitesmoke;
+	border-bottom: 1px solid white;
+	border-left: none;
+	border-right: none;
+}
+#scisub,#commsub,#artsub
+{
+	display: none;
+}
+body
+{
+	  font-family: 'Montserrat', sans-serif;
+}
+a
+{
+	text-decoration: none;
+	color: white;
+}
+/*table
+{
+	float: left;
+}*/
+#one
+{
+	border: 2px solid white;
+}
+body
+{    
+text-align: center;
+color: whitesmoke;
+background-color: black;
+font-size: 30px;
+}
+#sub,#res
+{
+	text-align: center;
+	margin-left: 50px;
+	background-color: whitesmoke;
+	color: black;
+	height: 50px;
+	width: 100px;
+	border: none;
+}
+#home
+{
+	margin-top: 50px;
+}
+</style>
+<body>
+<div id="one">
+<b>ENTER THE DETAILS OF THE STUDENT</b><br>
+
+<table>
+<form method="get" action="crudselectstar.php">
+
+<tr>
+Enter the students name:<input type="text" name="students_name" required></tr><tr>
+<br>Select the gender please:<input type="radio" id="m" name="gender" value="m" required>M</tr><tr>
+<input type="radio" id="f" name="gender" value="f">F<br></tr><tr>
+Enter the roll number please:<input type="number" name="roll_number" required><br></tr><tr>
+Select the result please:<input type="radio" id="p" name="result" value="p"  required>Pass</tr><tr>
+<input type="radio" id="f" name="result" value="f">Fail</tr>
+<tr><br>
+Please select the class:<br>
+     <input type="radio" id="sci" name="classos" required value="science" onclick="checkforsci()">SCIENCE </tr>
+    <tr> <br>
+ <div id="scisub">
+         PHYSICS:<input type="number"  name="phy" id="phyiscs"><br>
+         CHEMISTRY:<input type="number"  name="chem" id="chem"><br>
+         MATHS:<input type="number" name="math"  id="math"><br>
+
+      </div><br>
+</tr><tr>
+
+     
+     <input type="radio" id="comm" name="classos" required value="commerce" onclick="checkforcomm()">COMMERCE<br>
+
+     <div id="commsub">
+      ACCOUNT:<input type="number" name="acc"  id="accounts"><br>
+      TAXATION:<input type="number" name="tax"  id="taxy"><br>
+      ECONOMICS:<input type="number" name="eco"  id="eco"><br>
+      
+     </div></tr><br><tr>
+     <input type="radio" id="art" name="classos" required value="arts" onclick="checkforarts()">ARTS<br>
+      <div id="artsub"><br>
+
+         GEOGRAPHY:<input type="number" name="geo"  id="geog"><br>
+         PSYCHOLOGY:<input type="number" name="psy"  id="psyc"><br>
+         POLITICAL SCIENCE:<input type="number"  name="polsci" id="pol"><br>
+
+      </div></tr>
+<input type="submit" id="sub">
+<input type="reset" id="res">
+
+</form>
+</table>
+</div>
+
+<a href="http://localhost/crudapp/frontpage.html" id="home">GO BACK HOME</a>
+
+
+
+
+
+
+
+
+
+<script>
+
+     var choiceone=document.getElementById('sci');
+     var choicetwo=document.getElementById('comm');
+     var choicethree=document.getElementById('art');
+    function checkforsci()
+	{
+     if(choiceone=true)
+     {
+     	document.getElementById('scisub').style.display='inline';
+             	document.getElementById('commsub').style.display='none';
+     	document.getElementById('artsub').style.display='none';
+
+     	console.log("science selected!!!");
+     }
+   }
+   function checkforcomm()
+   {
+      if(choicetwo=true)
+     {
+
+     	document.getElementById('scisub').style.display='none';
+             	document.getElementById('commsub').style.display='inline';
+     	document.getElementById('artsub').style.display='none';     }
+   }
+   function checkforarts()
+   {
+     if(choicethree=true)
+     {
+     
+     	document.getElementById('scisub').style.display='none';
+             	document.getElementById('commsub').style.display='none';
+     	document.getElementById('artsub').style.display='inline';}
+   }
+   
+</script>
+
+
+
+
+
+
+</body>
+</html>

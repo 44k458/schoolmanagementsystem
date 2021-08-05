@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>FETCH DATA</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
+</head>
+<style>
+
+input[type="number"]
+{
+	background-color: transparent;
+	border-bottom: 2px solid white;
+	height: 50px;
+	color: whitesmoke;
+	font-size: 30px;
+    font-family:  'Montserrat', sans-serif;
+    border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+body
+{
+	background-color: black;
+    text-align: center;
+}
+#fetchdet
+{
+    font-family:  'Montserrat', sans-serif;
+    border: 1px solid whitesmoke;	
+    color: whitesmoke;
+    font-size: 30px;
+}
+#res,#sub
+{
+	background-color: black;
+	color: whitesmoke;
+	text-align: center;
+	border: 1px solid white;
+	height: 50px;
+	width: 100px;
+	margin-top:50px;
+}
+a
+{
+text-decoration: none;
+color: whitesmoke;
+}
+</style>
+<body><div id="fetchdet">
+
+	<b>FETCH THE DETAILS OF THE STUDENT</b>
+	<form method="$_GET" action="selcon.php">
+Please enter the roll number:<input type="number" id="roll" name="rollnum"><br>
+Please select the class:<input type="radio" id="science" value="science" name="classie">science
+                        <input type="radio" id="commerce" value="commerce" name="classie">commerce
+                        <input type="radio" id="arts" value="arts" name="classie">arts
+                        <br>
+<input type="submit" id="sub">            <br>
+<input type="reset" id="res"><br>            
+
+<a href="http://localhost/crudapp/frontpage.html">GO BACK HOME</a>
+</div>
+</body>
+</html>
